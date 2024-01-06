@@ -1,2 +1,10 @@
-# django-app
- 
+# Django Recipe App
+
+This is a recipe web app where users can log in, view and search recipes as well as see statistics about the recipes that came up during the search.
+
+This app was created during the CareerFoundry Python Specialization Course. The app can be found under the src folder.
+
+## Used technologies
+
+- Python
+- Django
