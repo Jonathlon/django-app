@@ -1,14 +1,55 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <title>Recipes</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: top;
+            height: 100vh;
+            background-image: url("{% static 'recipes/images/kitchen.jpg' %}");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .home-container {
+            font-family: "Satisfy", cursive;
+            font-weight: 400;
+            font-style: normal;
+
+        }
+
+        h1 {
+            font-size: 100px;
+        }
+
+        h2 {
+            font-size: 50px;
+            text-align: center;
+        }
+    </style>
 </head>
 
+
 <body>
-    <h1>Welcome to The Recipes App</h1>
+    <section class="home-container">
+        <h1>
+            Home of the Recipes
+        </h1>
+        <h2>
+            <a href="/recipes/list"> enter</a>
+        </h2>
+    </section>
+
 </body>
 
 </html>
