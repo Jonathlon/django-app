@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <title>Login</title>
+</head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: top;
+        height: 100vh;
+        background-image: url("{% static 'recipes/images/kitchen.jpg' %}");
+        background-size: cover;
+        background-position: center;
+    }
+
+    h1 {
+        color: black;
+    }
+
+    .login-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 200px;
+        font-family: "Satisfy", cursive;
+        font-size: 25px;
+
+
+    }
+
+    .button {
+        width: 70px;
+        font-family: "Satisfy", cursive;
+        font-size: 16px;
+        background-color: rgb(4, 45, 248);
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        text-align: center;
+        margin-top: 20px;
+
+    }
+</style>
+
+<body>
+    <div class="login-container">
+        <!-- <h2>Login</h2> -->
+        {% if error_message %}
+        {{error_message}}
+        {% endif %}
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{form}}
+            <div class="form-field center-button">
+                <button type="submit" class="button">Login</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

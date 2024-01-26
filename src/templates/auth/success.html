@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <title>Logout</title>
+</head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: top;
+        height: 100vh;
+        background-image: url("{% static 'recipes/images/kitchen.jpg' %}");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .success-container {
+        font-family: "Satisfy", cursive;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 100px;
+    }
+
+    h1 {
+        font-size: 100px;
+    }
+
+    a {
+        font-size: 50px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <section class="success-container">
+        <h1>You've been logged out</h1>
+        <a href="{% url 'login' %}">Login to browse Recipes</a>
+    </section>
+</body>
+
+</html>

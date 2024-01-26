@@ -6,17 +6,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recipes</title>
-
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <style>
         /* CSS styling for the page */
         body {
-            display: flex;
+            display: block;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            font-family: "Poppins", sans-serif;
+            font-family: "Satisfy", cursive;
             background-image: url("{% static 'recipes/images/kitchen.jpg' %}");
             background-size: cover;
             background-position: center;
@@ -28,8 +27,7 @@
             display: flex;
             flex-wrap: wrap;
             list-style: none;
-            padding-top: 100px;
-
+            padding-top: 200px;
             justify-content: center;
         }
 
@@ -84,15 +82,35 @@
             top: 5px;
             left: 50%;
             transform: translateX(-50%);
-            font-family: "Dancing Script", cursive;
+            font-family: "Satisfy", cursive;
             font-size: 84px;
             color: white;
             text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
+
+        .header {
+            display: block;
+            padding: 20px;
+            text-align: right;
+
+        }
+
+        .logout {
+            font-family: "Satisfy", cursive;
+            font-size: 25px;
+
+        }
     </style>
 </head>
 
+<header class="header">
+    <div>
+        <a href="{% url 'logout' %}" class="logout">Logout</a>
+    </div>
+</header>
+
 <body>
+
     <h1>Recipes</h1>
     <ul class="recipe-list">
         {% for object in object_list %}
