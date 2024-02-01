@@ -1,5 +1,11 @@
 from django.test import TestCase
 from .models import Recipe
+from .forms import RecipeSearchForm 
+
+# Create your tests here.
+
+from django.test import TestCase
+from .models import Recipe
 
 # Create your tests here.
 
@@ -21,3 +27,13 @@ class RecipeModelTest(TestCase):
     def test_difficulty_calculation(self):
         recipe = Recipe.objects.get(id=1)
         self.assertEqual(recipe.calc_difficulty(), 'Intermediate')
+
+class RecipeFormTestCase(TestCase):
+    def test_valid_form(self):
+        data = {
+            "name": "Spaghetti Bolognese",
+            "cooking_time": 25,
+            "ingredients": "Spaghetti, Beef Mince, Tomato Paste, Tomato Sauce, Onion",
+        }
+        form = RecipeSearchForm(data=data)
+        self.assertTrue(form.is_valid())
