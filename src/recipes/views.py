@@ -31,7 +31,7 @@ def records(request):
         chart_type = request.POST.get('chart_type')    
         print(recipe_name, chart_type)
         
-        qs = Recipe.objects.filter()
+        qs = Recipe.objects.filter(name=recipe_name)
         if qs:
             recipe_df = pd.DataFrame(qs.values())     
             recipe_df['id'] = recipe_df['id'].apply(get_recipename_from_id)               
