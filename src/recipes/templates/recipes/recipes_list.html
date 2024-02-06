@@ -95,9 +95,10 @@
 
         }
 
-        .logout {
+        .nav-item {
             font-family: "Satisfy", cursive;
             font-size: 25px;
+            padding-left: 50px;
 
         }
     </style>
@@ -105,7 +106,9 @@
 
 <header class="header">
     <div>
-        <a href="{% url 'logout' %}" class="logout">Logout</a>
+        <a href="" class="nav-item">Add Recipe</a>
+        <a href="recipes/records" class="nav-item">Search</a>
+        <a href="{% url 'logout' %}" class="nav-item">Logout</a>
     </div>
 </header>
 

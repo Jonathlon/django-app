@@ -8,5 +8,5 @@ urlpatterns = [
     path('', home),
     path('list/', RecipeListView.as_view(), name = 'list'),
     path('list/<pk>',RecipesDetailsView.as_view(), name = 'detail'),
-    path('recipes/records', records)
+    path('list/recipes/records', records, name='records'),
 ]
