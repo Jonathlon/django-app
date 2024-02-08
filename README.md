@@ -8,3 +8,10 @@ This app was created during the CareerFoundry Python Specialization Course. The 
 
 - Python
 - Django
+- HTML
+- CSS
+- JavaScript
+
+## Link to the live version
+
+The online hosted version of this app can be found here:[Recipe App]().

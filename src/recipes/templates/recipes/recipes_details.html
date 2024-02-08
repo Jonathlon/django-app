@@ -51,19 +51,21 @@
         .header {
             display: block;
             padding: 20px;
-            text-align: right;
+            text-align: left;
 
         }
 
-        .logout {
+        .nav-item {
             font-family: "Satisfy", cursive;
             font-size: 25px;
+            padding-left: 50px;
+
         }
     </style>
 </head>
 <header class="header">
     <div>
-        <a href="{% url 'logout' %}" class="logout">Logout</a>
+        <a href="/list/" class="nav-item">Back to recipes</a>
     </div>
 </header>
 

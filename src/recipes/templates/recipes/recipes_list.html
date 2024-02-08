@@ -19,7 +19,8 @@
             background-image: url("{% static 'recipes/images/kitchen.jpg' %}");
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
+            /* background-repeat: no-repeat; */
+
         }
 
         /* CSS styling for images */
@@ -29,6 +30,7 @@
             list-style: none;
             padding-top: 200px;
             justify-content: center;
+
         }
 
         .recipe-item {
@@ -84,8 +86,8 @@
             transform: translateX(-50%);
             font-family: "Satisfy", cursive;
             font-size: 84px;
-            color: white;
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            color: rgb(0, 0, 0);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
 
         .header {
@@ -106,8 +108,10 @@
 
 <header class="header">
     <div>
-        <a href="" class="nav-item">Add Recipe</a>
-        <a href="recipes/records" class="nav-item">Search</a>
+        <a href="/list/" class="nav-item">Recipes</a>
+        <a href="/create/" class="nav-item">Add Recipe</a>
+        <a href="/records/" class="nav-item">Search</a>
+        <a href="/about/" class="nav-item">About</a>
         <a href="{% url 'logout' %}" class="nav-item">Logout</a>
     </div>
 </header>

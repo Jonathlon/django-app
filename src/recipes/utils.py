@@ -24,7 +24,7 @@ def get_chart(chart_type, data, **kwargs):
     fig = plt.figure(figsize = (6,3))
     
     if chart_type == '#1':
-        plt.bar(data['cooking_time'], data['ingredients'])
+        plt.bar(data['name'], data['cooking_time'])
         
     elif chart_type == '#2':
         
