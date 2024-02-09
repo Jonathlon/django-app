@@ -44,6 +44,8 @@ def create_view(request):
 
             recipe.save()
 
+           
+
         except:
             print('Error!!!')
 
