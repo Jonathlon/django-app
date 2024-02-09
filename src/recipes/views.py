@@ -39,7 +39,7 @@ def create_view(request):
                 cooking_time = request.POST.get('cooking_time'),
                 ingredients = request.POST.get('ingredients'),
                 description = request.POST.get('description'),
-                pictures = request.POST.get('pictures')
+                pictures = request.FILES.get('picutres', 'no_picture.jpg')
             )
 
             recipe.save()
@@ -57,7 +57,6 @@ def create_view(request):
     }
 
     return render(request, 'recipes/create.html', context)
-
 
 @login_required
 def records(request):
